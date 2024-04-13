@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<connectionStrings>
+	<add name="Conexiondb" connectionString="Data Source=COBOPROBESQL2;Initial Catalog=Pruebas;User ID=USER_SISECORE;Password=JKWEVDGNUG;" />
+</connectionStrings>

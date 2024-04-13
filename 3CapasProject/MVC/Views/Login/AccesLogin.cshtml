@@ -1,0 +1,156 @@
+﻿@model BE.Usuarios
+
+@{
+    ViewBag.Title = "AccesLogin";
+    Layout = null;
+}
+<title>@ViewBag.Nombre_Login | Login</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/Content/estillos.css">
+
+
+</head>
+<body>
+
+
+    <section>
+        <div class="general">
+            <div class="user singinBox">
+                <div class="imgBx"><img src="~/img_sistema/login2.png" alt="Login"></div>
+                <div class="formBx">
+
+
+                    <form action="@Url.Action()" id="formAccede" method="post">
+                        @{
+                            if (!string.IsNullOrEmpty(ViewBag.Message))
+                            {
+                                <div id="alertDiv" class="alert alert-danger alertDiv">@ViewBag.Message</div>
+                            }
+                        }
+                        <h2>Inicia Sesion</h2>
+
+
+                        @*@Html.EditorFor(model => model.Correo, new { htmlAttributes = new { @class = "form-control", @placeholder = "&#128272; Usuario", } })
+                            @Html.EditorFor(model => model.Contraseña, new { htmlAttributes = new { @class = "form-control" } })*@
+
+                        <input id="usuario" type="text" name="correo" value="" placeholder="&#128272; Usuario">
+                        <input id="password" type="password" name="contraseña" placeholder="&#128273; Contraseña">
+
+
+                        <input id="ingresar" type="submit" value="Ingresar">
+
+                        <p class="signup">No tienes cuenta? <a href="#" onclick="toggleForm()">Registrate</a></p>
+                    </form>
+
+
+                </div>
+            </div>
+
+            <div class="user singupBx">
+                <div class="formBx">
+                    <form id="formRegistra">
+                        <h2>Registrarse</h2>
+                        <input type="text" name="usuario" value="" placeholder="Usuario" required>
+                        <input type="email" name="correo" value="" placeholder="Correo" required>
+                        <input type="password" name="contraseña" value="" placeholder="Contraseña" required>
+                        <input type="password" name="u_contraseña2" value="" placeholder="Confirmar Contraseña">
+                        <input type="submit" name="registrar" value="Registrarse">
+
+                        <p class="signup">ya tienes una cuenta? <a href="#" onclick="toggleForm()">Iniciar Sesión</a></p>
+                    </form>
+                </div>
+                <div class="imgBx"><img src="~/img_sistema/registro2.png" alt="Registro"></div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function toggleForm() {
+            //alert("jss");
+            var container = document.querySelector('.general');
+            container.classList.toggle("active");
+            /* const container = document.querySelector('.container');
+            container.classList.add("active");*/
+        }</script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    @*<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>*@
+
+
+</body>
+</html>
+<!-- Bootstrap core JavaScript-->
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+<script src="~/Scripts/jquery-1.11.0.min.js"></script>
+@*<script src="~/Scripts/Login/Index.js"></script>*@
+
+<script>
+    // Mostrar el div
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("alertDiv").style.display = "block";
+
+        // Cambiar el color a rojo y desaparecer después de 3 segundos (3000 milisegundos)
+        setTimeout(function () {
+            document.getElementById("alertDiv").style.display = "none";
+            $('#usuario').val(null);
+        }, 3000);
+    });
+</script>
+
+
+
+
+
+@*<h2>AccesLogin</h2>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4>Usuarios</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.UsuarioLogin, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.UsuarioLogin, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.UsuarioLogin, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Correo, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Correo, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Correo, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Contraseña, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Contraseña, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Contraseña, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>*@

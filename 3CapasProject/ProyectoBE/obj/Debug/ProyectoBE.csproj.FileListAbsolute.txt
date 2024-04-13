@@ -1,0 +1,12 @@
+E:\Visual C#\mmerchan\3CapasProject\ProyectoBE\bin\Debug\ProyectoBE.dll.config
+E:\Visual C#\mmerchan\3CapasProject\ProyectoBE\bin\Debug\ProyectoBE.dll
+E:\Visual C#\mmerchan\3CapasProject\ProyectoBE\bin\Debug\ProyectoBE.pdb
+E:\Visual C#\mmerchan\3CapasProject\ProyectoBE\bin\Debug\EntityFramework.dll
+E:\Visual C#\mmerchan\3CapasProject\ProyectoBE\bin\Debug\EntityFramework.SqlServer.dll
+E:\Visual C#\mmerchan\3CapasProject\ProyectoBE\bin\Debug\EntityFramework.xml
+E:\Visual C#\mmerchan\3CapasProject\ProyectoBE\bin\Debug\EntityFramework.SqlServer.xml
+E:\Visual C#\mmerchan\3CapasProject\ProyectoBE\obj\Debug\ProyectoBE.csproj.AssemblyReference.cache
+E:\Visual C#\mmerchan\3CapasProject\ProyectoBE\obj\Debug\ProyectoBE.csproj.CoreCompileInputs.cache
+E:\Visual C#\mmerchan\3CapasProject\ProyectoBE\obj\Debug\ProyectoBE.csproj.CopyComplete
+E:\Visual C#\mmerchan\3CapasProject\ProyectoBE\obj\Debug\ProyectoBE.dll
+E:\Visual C#\mmerchan\3CapasProject\ProyectoBE\obj\Debug\ProyectoBE.pdb

@@ -1,0 +1,76 @@
+﻿@model BE.Producto
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar Producto </h2>
+
+<h3></h3>
+<div>
+
+    <hr />
+    <dl class="dl-horizontal dl-centered">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Referencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Referencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Categoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Categoria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Precio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Precio)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+
+        <div style="display: flex; justify-content: space-between;">
+            <p><a href="~/Productos" class="btn btn-info ">Ver Productos </a></p>
+            <input type="submit" value="Eliminar " class="btn btn-danger" />
+        </div>
+    }
+</div>
+
+
+
+
+
+<style>
+    .dl-centered {
+        margin-left: 30%; /* Esto centra el bloque horizontalmente */
+    }
+</style>

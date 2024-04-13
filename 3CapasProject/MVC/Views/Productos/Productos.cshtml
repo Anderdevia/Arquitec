@@ -1,0 +1,174 @@
+﻿@{
+    ViewBag.Title = "Productos";
+}
+
+<h2>Productos</h2>
+
+@*<div>
+        <p><a href="~/Productos/Crear" class="btn btn-success ">+ Agregar Producto</a></p>
+    </div>*@
+<div>
+    <p>@ViewBag.Message</p>
+</div>
+<div class="my-2">
+    <button id="btnNuevo" type="button" class="smalTi" data-toggle='modal' data-target='#ModalAgregar'>Agregar Producto</button>
+</div>
+
+
+<table id="tablaProducto" class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Stock</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Proveedor</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Eliminar</th>
+
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+<div class="modal fade modal" id="ModalAgregar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" style="min-height: 100vh;" role="document">
+        <div class=" modal-content " style="width: 330px; left: 20%;">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Agregar Producto</h5>
+                <button id="" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div id="errorMessage" class="text-danger small-textmjs" style="display:none;"></div>
+
+            <div class="modal-body text-center" style="padding-left: 25px;">
+                <form action="" id="formRegistra" style="width: 280px;" enctype="multipart/form-data">
+                    <input type="hidden" name="codigo" id="codigo" value="" />
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="nombre" placeholder="Producto"
+                               id="nombreProducto">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="descripcion" placeholder="Descripcion"
+                               id="descripcionProducto">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="number" name="referencia" placeholder="Referencia"
+                               id="referenciaProducto">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="number" name="stockActual" placeholder="Stock"
+                               id="stockProducto">
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control" name="categoria" id="categoriaProducto"></select>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="number" name="precio" placeholder="Precio"
+                               id="precioProducto">
+                    </div>
+
+                    <div class="form-group">
+                        <input class="form-control" type="file" name="Imagen" placeholder="Imagen"
+                               id="imagenProducto">
+                    </div>
+
+                    <div class="form-group">
+                        <select class="form-control" name="proveedor" id="proveedorProducto"></select>
+                    </div>
+
+                    <button id="registrar" class="form-control btn btn-primary" type="submit">Registrar</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade modal" id="ModalActualizar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" style="min-height: 100vh;" role="document">
+        <div class=" modal-content " style="width: 330px; left: 20%;">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Actualizar Producto</h5>
+                <button id="" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div id="errorMessageA" class="text-danger small-textmjs" style="display:none;"></div>
+
+            <div class="modal-body text-center" style="padding-left: 25px;">
+                <form action="" id="formActualiza" style="width: 280px;" enctype="multipart/form-data">
+                    <input type="hidden" name="codigo" id="codigoA"  />
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="nombre" placeholder="Producto"
+                               id="nombreProductoA">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="descripcion" placeholder="Descripcion"
+                               id="descripcionProductoA">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="number" name="referencia" placeholder="Referencia"
+                               id="referenciaProductoA">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="number" name="stockActual" placeholder="Stock"
+                               id="stockProductoA">
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control" name="categoria" id="categoriaProductoA"></select>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="number" name="precio" placeholder="Precio"
+                               id="precioProductoA">
+                    </div>
+
+                    <div class="form-group">
+                        <input class="form-control" type="file" name="Imagen" placeholder="Imagen"
+                               id="imagenProductoA">
+                        <br />
+                        <div id="foto" style="width: 100%;">
+
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <input class="form-control" type="hidden" name="nombreRutaA" placeholder="NombreRutaA"
+                               id="nombreRutaA">
+                    </div>
+
+
+                    <div class="form-group">
+                        <select class="form-control" name="proveedor" id="proveedorProductoA"></select>
+                    </div>
+
+                    <button id="actualizar" class="form-control btn btn-primary" type="submit">Actualizar</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script src="~/Scripts/jquery-1.11.0.min.js"></script>
+<script src="~/Scripts/Producto/Crear.js"></script>
+<script src="~/Scripts/_LayaoutAdmin/_LayaoutAdmin.js"></script>

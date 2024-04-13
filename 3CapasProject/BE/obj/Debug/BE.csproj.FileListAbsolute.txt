@@ -1,0 +1,12 @@
+E:\Visual C#\mmerchan\3CapasProject\BE\bin\Debug\BE.dll
+E:\Visual C#\mmerchan\3CapasProject\BE\bin\Debug\BE.pdb
+E:\Visual C#\mmerchan\3CapasProject\BE\obj\Debug\BE.csproj.CoreCompileInputs.cache
+E:\Visual C#\mmerchan\3CapasProject\BE\obj\Debug\BE.dll
+E:\Visual C#\mmerchan\3CapasProject\BE\obj\Debug\BE.pdb
+E:\Visual C#\mmerchan\3CapasProject\BE\obj\Debug\BE.csproj.AssemblyReference.cache
+D:\documentos_Anderson\Ibeor\Arquitectura de Software\3CapasProject\BE\bin\Debug\BE.dll
+D:\documentos_Anderson\Ibeor\Arquitectura de Software\3CapasProject\BE\bin\Debug\BE.pdb
+D:\documentos_Anderson\Ibeor\Arquitectura de Software\3CapasProject\BE\obj\Debug\BE.csproj.CoreCompileInputs.cache
+D:\documentos_Anderson\Ibeor\Arquitectura de Software\3CapasProject\BE\obj\Debug\BE.dll
+D:\documentos_Anderson\Ibeor\Arquitectura de Software\3CapasProject\BE\obj\Debug\BE.pdb
+D:\documentos_Anderson\Ibeor\Arquitectura de Software\3CapasProject\BE\obj\Debug\BE.csproj.AssemblyReference.cache

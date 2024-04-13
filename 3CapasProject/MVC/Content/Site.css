@@ -1,0 +1,113 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.dl-centered {
+    margin-left: 30%; /* Esto centra el bloque horizontalmente */
+}
+
+
+.small-textmjs {
+    font-size: 12px; /* Tamaño de la fuente */
+    padding-left: 20px; /* Padding izquierdo */
+    padding-right: 10px; /* Padding derecho */
+}
+
+.small-font {
+    font-size: 12px;
+    /* Puedes agregar más estilos aquí si lo necesitas */
+}
+
+/* estilos.css */
+#tablaProducto th {
+    font-size: 12px;
+}
+
+/* estilos.css */
+#tablaProducto_wrapper .dataTables_info,
+#tablaProducto_wrapper .dataTables_length,
+#tablaProducto_wrapper .dataTables_paginate {
+    font-size: 12px;
+}
+
+/* Estilo para centrar el texto y los elementos del DataTable */
+#tablaProducto.dataTable tbody td, #tablaProducto.dataTable tbody th,
+#tablaProducto.dataTable thead th {
+    text-align: center;
+}
+
+/* estilos.css */
+.dataTables_filter {
+    font-size: 12px;
+}
+
+.btn-small-table {
+    font-size: 10px; /* Tamaño de letra más pequeño para los botones */
+}
+
+.smalTi {
+    background-color: #007BFF; /* Color azul */
+    color: white; /* Texto en color blanco */
+    padding: 10px 15px; /* Espaciado interno del botón */
+    font-size: 12px; /* Tamaño de letra */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor apuntador */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+
+.collapse-modulos {
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    display: block;
+    color: #3a3b45;
+    text-decoration: none;
+    border-radius: 0.35rem;
+    white-space: nowrap;
+}
+
+
+/* Estilo base para los ítems del menú lateral */
+.collapse-itemfun {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #4e73df; /* Color azul por defecto */
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+    /* Estilo al pasar el cursor por encima del ítem */
+    .collapse-itemfun:hover {
+        background-color: #343a40; /* Gris oscuro */
+        color: #ffffff; /* Blanco */
+    }
+
+    /* Estilo para los ítems activos */
+    .collapse-itemfun.active {
+        background-color: #e9ecef; /* Gris claro */
+        color: #4e73df; /* Color azul */
+    }
